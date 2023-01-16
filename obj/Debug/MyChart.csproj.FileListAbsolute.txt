@@ -1,0 +1,11 @@
+C:\Users\cuido\Desktop\MyChart\bin\Debug\MyChart.exe.config
+C:\Users\cuido\Desktop\MyChart\bin\Debug\MyChart.exe
+C:\Users\cuido\Desktop\MyChart\bin\Debug\MyChart.pdb
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.csproj.AssemblyReference.cache
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.csproj.SuggestedBindingRedirects.cache
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.Form1.resources
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.Properties.Resources.resources
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.csproj.GenerateResource.cache
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.csproj.CoreCompileInputs.cache
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.exe
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.pdb
