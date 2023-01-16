@@ -176,6 +176,7 @@ namespace MyCTest1
         {
             MyCTest2 myCT=new MyCTest2();
             myCT.ShowDialog();
+            //git test
             
         }
     }
