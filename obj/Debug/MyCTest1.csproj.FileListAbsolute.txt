@@ -1,0 +1,12 @@
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.csproj.AssemblyReference.cache
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.csproj.SuggestedBindingRedirects.cache
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.MyCTest1.resources
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.Properties.Resources.resources
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.csproj.GenerateResource.cache
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.csproj.CoreCompileInputs.cache
+C:\Users\cuido\Desktop\MyCTest1\bin\Debug\MyCTest1.exe.config
+C:\Users\cuido\Desktop\MyCTest1\bin\Debug\MyCTest1.exe
+C:\Users\cuido\Desktop\MyCTest1\bin\Debug\MyCTest1.pdb
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.exe
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.pdb
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.MyCTest2.resources
