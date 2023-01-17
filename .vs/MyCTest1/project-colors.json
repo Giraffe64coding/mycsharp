@@ -5,7 +5,12 @@
       "ProjectGuid": "1f0166cb-0261-4a0a-840a-e1b95bfa7256",
       "DisplayName": "MyCTest1",
       "ColorIndex": 0
+    },
+    "7e708628-8357-4f70-bfd2-1c3dd1603a58": {
+      "ProjectGuid": "7e708628-8357-4f70-bfd2-1c3dd1603a58",
+      "DisplayName": "MyChart",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using MySql.Data.MySqlClient;
 
 
 namespace MyCTest1
@@ -178,7 +179,11 @@ namespace MyCTest1
             myCT.ShowDialog();
             //git test
             //git third test
-            
-        }
+
+        }//Show MyCTest2 Form
+
+        
+
+        
     }
 }
