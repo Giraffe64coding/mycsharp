@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7E708628-8357-4F70-BFD2-1C3DD1603A58}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>MyChart</RootNamespace>
     <AssemblyName>MyChart</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -59,6 +62,18 @@
     <Compile Include="MyLineChart.Designer.cs">
       <DependentUpon>MyLineChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyPieChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyPieChart.Designer.cs">
+      <DependentUpon>MyPieChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySQLDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MySQLDatabase.Designer.cs">
+      <DependentUpon>MySQLDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MyMainChart.resx">
@@ -66,6 +81,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyLineChart.resx">
       <DependentUpon>MyLineChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyPieChart.resx">
+      <DependentUpon>MyPieChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MySQLDatabase.resx">
+      <DependentUpon>MySQLDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

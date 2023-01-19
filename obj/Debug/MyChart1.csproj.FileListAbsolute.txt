@@ -10,3 +10,5 @@ C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.exe
 C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.pdb
 C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.MyMainChart.resources
 C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.MyLineChart.resources
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.MyPieChart.resources
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.MySQLDatabase.resources

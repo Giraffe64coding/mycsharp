@@ -41,18 +41,31 @@ namespace MyChart
                 new[] { 100, 50, 250, 100, 50 }
                 );
 
-        }
+        }//Open MainChart & Change Color
 
         private void chart1_Click(object sender, EventArgs e)
         {
 
-        }
+        }//Empty
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MyLineChart myChart2=new MyLineChart();
-            myChart2.Show();
+            MyLineChart myLineChart=new MyLineChart();
+            myLineChart.Show();
 
-        }
+        }//Open Line Chart
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MyPieChart myPieChart=new MyPieChart();
+            myPieChart.Show();
+        }//Open Pie Chart
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MySQLDatabase mySQLDatabase = new MySQLDatabase();
+            mySQLDatabase.Show();
+        }//Open SQL Database Form
+
     }
 }
