@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.IO;
 //using MySql.Data.MySqlClient;
 
 
@@ -19,6 +21,56 @@ namespace MyCTest1
             InitializeComponent();            
         }
         Random rdNum = new Random();
+
+        private void MyCTest1_Load(object sender, EventArgs e)
+        {
+            maskedTextBox1.Mask = "(999)000-0000";
+
+            monthCalendar1.SelectionStart = DateTime.Now;
+            monthCalendar1.SelectionEnd = DateTime.Now.AddDays(3);
+
+            // MaxSelectionCount 디폴트 값은 7일            
+            monthCalendar1.MaxSelectionCount = 31;
+
+            //MonthCalender
+            ContextMenu ctx = new ContextMenu();
+            ctx.MenuItems.Add(new MenuItem("열기"));
+            ctx.MenuItems.Add(new MenuItem("실행"));
+            ctx.MenuItems.Add("-");
+            ctx.MenuItems.Add(new MenuItem("종료", new EventHandler((s, ex) => this.Close())));
+            notifyIcon1.ContextMenu = ctx;
+
+            //NumericUpDown
+            numericUpDown1.Value = 21.0M;
+
+            //TreeView
+            // TreeView에 사용할 ImageList 정의
+            //ImageList imgList = new ImageList();
+            //imgList.Images.Add(Bitmap.FromFile("server.jpg"));
+            //imgList.Images.Add(Bitmap.FromFile("network.jpg"));
+            //treeView1.ImageList = imgList;
+
+
+            // 첫번째 TreeView 아이템 - 서버
+            TreeNode svrNode = new TreeNode("서버", 0, 0);
+            svrNode.Nodes.Add("SE", "서울 서버", 0, 0);
+            svrNode.Nodes.Add("DJ", "대전 서버", 0, 0);
+            svrNode.Nodes.Add("BS", "부산 서버", 0, 0);
+
+            // 두번째 TreeView 아이템 - 네트웍
+            TreeNode netNode = new TreeNode("네트웍", 1, 1);
+            netNode.Nodes.Add("T1", "T1 케이블", 1, 1);
+            netNode.Nodes.Add("56K", "56K 모뎀", 1, 1);
+            netNode.Nodes.Add("3G", "3G 무선", 1, 1);
+
+            // 2개의 노드를 TreeView에 추가
+            treeView1.Nodes.Add(svrNode);
+            treeView1.Nodes.Add(netNode);
+
+            // 모든 트리 노드를 보여준다
+            treeView1.ExpandAll();
+        }
+
         private void btnDown_Click(object sender, EventArgs e)
         {
             MessageBox.Show("내용", "제목",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question);
@@ -177,13 +229,110 @@ namespace MyCTest1
         {
             MyCTest2 myCT=new MyCTest2();
             myCT.ShowDialog();
-            //git test
-            //git third test
-
+            
         }//Show MyCTest2 Form
 
-        
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.google.com/");
+        }//linklabel
 
-        
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.naver.com/");
+           
+        }//linklabel
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            if (e.Position < 5) // (999)인 경우
+            {
+                toolTip1.Show("숫자나 공란만 입력 가능", this);
+                resultText.Text = "mask1";
+            }
+            else // 000-0000 인 경우
+            {
+                toolTip1.Show("숫자만 입력 가능", this);
+                resultText.Text = "mask2";
+            }
+        }//maskedtextbox
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string val = maskedTextBox1.Text;
+            MessageBox.Show(val);
+        }//maskedtextbox
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            
+            textBox1.Text = monthCalendar1.SelectionStart.ToShortDateString();
+            textBox2.Text = monthCalendar1.SelectionEnd.ToShortDateString();
+        }//MonthCalender
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+                this.WindowState = FormWindowState.Normal;
+                this.Activate();
+        }//NotifyIcon
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            // 섭씨를 화씨로 변경
+            decimal C = numericUpDown1.Value;
+            decimal F = C * (9.0M / 5.0M) + 32.0M;
+
+            // 화씨 출력
+            this.textBox3.Text = F.ToString();
+        }//NumericUpDown
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string filepath = textBox4.Text;
+            if (string.IsNullOrEmpty(filepath) ||
+                  !File.Exists(filepath))
+            {
+                MessageBox.Show("Invalid file name");
+                return;
+            }
+
+            // Load .RTF or Text File
+            richTextBox1.LoadFile(filepath);
+        }//RichTextBox
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectionStart = 0;
+            richTextBox1.SelectionLength = richTextBox1.Text.Length;
+            richTextBox1.SelectionFont = new Font(SystemFonts.DefaultFont, FontStyle.Italic);
+        }//RichTextBoxChange
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            string nodeKey = e.Node.Name;
+            if (!string.IsNullOrEmpty(nodeKey))
+            {
+                MessageBox.Show("선택된 노드 키 : " + nodeKey);
+            }
+        }//TreeView
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string url = textBox5.Text;
+            webBrowser1.Navigate(url);
+        }//WebBrowser
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            string msg = e.Url + " 로딩 완료!";
+            MessageBox.Show(msg);
+        }//WebBrowser
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            MyBackGroundWorker worker = new MyBackGroundWorker();
+            worker.Show();
+        }
     }
 }

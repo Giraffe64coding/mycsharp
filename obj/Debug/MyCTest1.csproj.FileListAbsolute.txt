@@ -10,3 +10,4 @@ C:\Users\cuido\Desktop\MyCTest1\bin\Debug\MyCTest1.pdb
 C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.exe
 C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.pdb
 C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.MyCTest2.resources
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.MyBackGroundWorker.resources
