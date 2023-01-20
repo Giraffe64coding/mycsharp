@@ -12,3 +12,11 @@ C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.MyMainChart.resources
 C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.MyLineChart.resources
 C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.MyPieChart.resources
 C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart.MySQLDatabase.resources
+C:\Users\cuido\Desktop\MyChart\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart1.csproj.Fody.CopyLocal.cache
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart1.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\cuido\Desktop\MyChart\obj\Debug\MyChart1.csproj.CopyComplete
+C:\Users\cuido\Desktop\MyChart\bin\Debug\Costura.dll
+C:\Users\cuido\Desktop\MyChart\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\cuido\Desktop\MyChart\bin\Debug\Costura.pdb
+C:\Users\cuido\Desktop\MyChart\bin\Debug\Costura.xml
