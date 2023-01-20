@@ -55,11 +55,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnTimeChange = new System.Windows.Forms.Button();
-            this.btnOpen = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -74,8 +73,8 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -90,6 +89,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.gbGender.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -101,6 +103,7 @@
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnDown
@@ -371,16 +374,6 @@
             this.btnTimeChange.UseVisualStyleBackColor = false;
             this.btnTimeChange.Click += new System.EventHandler(this.btnTimeChange_Click);
             // 
-            // btnOpen
-            // 
-            this.btnOpen.Location = new System.Drawing.Point(218, 321);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(75, 23);
-            this.btnOpen.TabIndex = 19;
-            this.btnOpen.Text = "새 창 열기";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.linkLabel2);
@@ -406,6 +399,16 @@
             this.linkLabel2.Text = "네이버";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(6, 22);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "사이트 링크";
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -417,16 +420,6 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "구글";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(6, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "사이트 링크";
             // 
             // maskedTextBox1
             // 
@@ -547,15 +540,6 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "NumericUpDown";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 27);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 12);
-            this.label6.TabIndex = 32;
-            this.label6.Text = "섭씨";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -564,6 +548,15 @@
             this.label7.Size = new System.Drawing.Size(29, 12);
             this.label7.TabIndex = 32;
             this.label7.Text = "화씨";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(29, 12);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "섭씨";
             // 
             // richTextBox1
             // 
@@ -705,11 +698,45 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // panel1
+            // 
+            this.panel1.AllowDrop = true;
+            this.panel1.BackColor = System.Drawing.Color.Green;
+            this.panel1.Location = new System.Drawing.Point(15, 21);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(120, 79);
+            this.panel1.TabIndex = 47;
+            this.panel1.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel1_DragDrop);
+            this.panel1.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel1_DragEnter);
+            this.panel1.DragLeave += new System.EventHandler(this.panel1_DragLeave);
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.panel1);
+            this.groupBox10.Location = new System.Drawing.Point(569, 305);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(154, 118);
+            this.groupBox10.TabIndex = 48;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "DragAndDrop";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(227, 319);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 49;
+            this.button6.Text = "Thread";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // MyCTest1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 604);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
@@ -718,7 +745,6 @@
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.cbButton);
             this.Controls.Add(this.cbRabbit);
@@ -752,6 +778,7 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -784,7 +811,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnTimeChange;
-        private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
@@ -819,6 +845,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Button button6;
     }
 }
 

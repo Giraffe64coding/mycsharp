@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
-//using MySql.Data.MySqlClient;
+
 
 
 namespace MyCTest1
@@ -333,6 +333,30 @@ namespace MyCTest1
         {
             MyBackGroundWorker worker = new MyBackGroundWorker();
             worker.Show();
+        }
+
+        private void panel1_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.All;
+            panel1.BackColor = Color.Red;
+        }
+
+        private void panel1_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files=(string[])e.Data.GetData(DataFormats.FileDrop);
+            MessageBox.Show(files[0]);
+            panel1.BackColor = Color.Black;
+        }
+
+        private void panel1_DragLeave(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(0, 192, 0);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MyCTest2 myTest2= new MyCTest2();
+            myTest2.Show();
         }
     }
 }

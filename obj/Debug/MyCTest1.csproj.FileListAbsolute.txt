@@ -11,3 +11,7 @@ C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.exe
 C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.pdb
 C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.MyCTest2.resources
 C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.MyBackGroundWorker.resources
+C:\Users\cuido\Desktop\MyCTest1\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.csproj.Fody.CopyLocal.cache
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\cuido\Desktop\MyCTest1\obj\Debug\MyCTest1.csproj.CopyComplete
